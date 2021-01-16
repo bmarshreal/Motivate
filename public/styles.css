@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-li {
+ul {
   list-style: none;
 }
 .navbar {
@@ -16,15 +16,175 @@ li {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  opacity: 0.5;
+  opacity: 1;
   z-index: 2;
+  font-weight: 700;
 }
 
 .heroImage {
   background-image: url(https://cdn.hipwallpaper.com/i/76/45/vCQuNj.jpg);
-  min-height: 30rem;
+  min-height: 40rem;
   background-repeat: no-repeat;
   min-width: 100vw;
+  width: 100%;
   background-attachment: fixed;
   background-size: cover;
+  margin-bottom: 4rem;
+}
+
+.heroHeader {
+  color: aliceblue;
+  margin-top: 13.5rem;
+  font-size: 4.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hidden {
+  visibility: hidden;
+}
+
+/* ********** */
+.slideContainer {
+  margin-right: 2rem;
+}
+
+.leftSlide {
+  margin: 2rem;
+  margin-top: auto;
+  animation: slideInLeft;
+  animation-duration: 3s;
+}
+
+.leftSlideText {
+  font-size: 2rem;
+  float: left;
+  min-width: 100%;
+  display: block;
+  margin: auto;
+}
+.leftSlideImg {
+  min-width: 200px;
+  min-height: 100px;
+  float: right;
+  border-radius: 10px;
+  margin: 2.5rem;
+}
+
+.leftSlideInAuthor {
+  margin-top: auto;
+  list-style: none;
+  float: left;
+  max-height: 5rem;
+  min-width: 100%;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.rightSlide {
+  margin: 2rem;
+  animation: slideInRight;
+  animation-duration: 3s;
+  margin-top: auto;
+}
+
+.rightSlideText {
+  font-size: 2rem;
+  float: right;
+  min-width: 100%;
+  display: block;
+  margin: auto;
+}
+.rightSlideImg {
+  min-width: 200px;
+  min-height: 100px;
+  float: left;
+  border-radius: 10px;
+  margin: 2.5rem;
+}
+
+.rightSlideInAuthor {
+  list-style: none;
+  float: right;
+  max-height: 5rem;
+  min-width: 100%;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+/* ************************************************************** */
+@media screen and (max-width: 500px) {
+  .leftSlide {
+    margin: auto;
+    margin-top: auto;
+    animation: slideInLeft;
+    animation-duration: 3s;
+  }
+
+  .leftSlideText {
+    font-size: large;
+    float: left;
+    min-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .leftSlideImg {
+    min-width: 200px;
+    min-height: 100px;
+    float: none;
+    border-radius: 10px 10px 0 0px;
+    margin: auto;
+  }
+
+  .leftSlideInAuthor {
+    margin: auto;
+    list-style: none;
+    float: left;
+    max-height: 5rem;
+    min-width: 100%;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .rightSlide {
+    margin: auto;
+    margin-top: auto;
+    animation: slideInRight;
+    animation-duration: 3s;
+  }
+
+  .rightSlideText {
+    font-size: large;
+    float: right;
+    min-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .rightSlideImg {
+    min-width: 200px;
+    min-height: 100px;
+    float: none;
+    border-radius: 10px 10px 0 0px;
+    margin: auto;
+  }
+
+  .rightSlideInAuthor {
+    margin: auto;
+    list-style: none;
+    float: left;
+    max-height: 5rem;
+    min-width: 100%;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 0 0 10px 10px;
+  }
 }

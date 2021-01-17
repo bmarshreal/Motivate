@@ -1,17 +1,16 @@
 import React from "react";
 import { Image } from "react-bootstrap";
+import { propTypes } from "react-bootstrap/esm/Image";
 import DataFetching from "./DataFetching";
 
-function DynaImage(params) {
+function DynaImage(props) {
   return (
     <div>
-      <div>
-        <Image
-          src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/main/articles/inspiringquotesaboutbeingadreamer.jpg"
-          fluid
-          style={{ float: "auto", margin: "auto" }}
-        />
-      </div>
+      <img
+        style={{ width: "500px", height: "500px" }}
+        src={props.photos}
+        alt="randomPic"
+      ></img>
     </div>
   );
 }

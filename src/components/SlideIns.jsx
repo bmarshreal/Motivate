@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Image, Container, Row, Col } from "react-bootstrap";
 import MediaQuery from "react-responsive";
-import DynaImage from "./DynaImage";
 
 function SlideIns(props) {
   return (
@@ -16,11 +15,11 @@ function SlideIns(props) {
                 <div className="leftSlideCluster">
                   <Row>
                     <Col>
-                      <Image
+                      <img
                         className="leftSlideImg"
-                        src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/main/articles/inspiringquotesaboutbeingadreamer.jpg"
-                        fluid
-                      />
+                        src={props.photos[0].toString()}
+                        alt="randomPic"
+                      ></img>
                     </Col>
                     <Col>
                       <p className="leftSlideInAuthor">
@@ -45,11 +44,11 @@ function SlideIns(props) {
                   <Row>
                     <MediaQuery query="(max-device-width: 500px)">
                       <Col>
-                        <Image
+                        <img
                           className="rightSlideImg"
-                          src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/main/articles/inspiringquotesaboutbeingadreamer.jpg"
-                          fluid
-                        />
+                          src={props.photos[1].toString()}
+                          alt="randomPic"
+                        ></img>
                       </Col>
                       {/* //Insert any components/html here that you want rendered
                       thats below 1024px */}
@@ -66,11 +65,11 @@ function SlideIns(props) {
                     </Col>
                     <MediaQuery query="(min-device-width: 500px)">
                       <Col>
-                        <Image
+                        <img
                           className="rightSlideImg"
-                          src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/main/articles/inspiringquotesaboutbeingadreamer.jpg"
-                          fluid
-                        />
+                          src={props.photos[1].toString()}
+                          alt="randomPic"
+                        ></img>
                       </Col>
                       {/* //Insert any components/html here that you want rendered
                       thats below 1024px */}

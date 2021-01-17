@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import SlideIns from "./SlideIns";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+import DynaImage from "./DynaImage";
 
 function DataFetching(props) {
   const [quotes, setQuotes] = useState([]);
+  const [pics, setPics] = useState([]);
   const [scrollingPoint, setScrollingPoint] = useState(false);
 
   useEffect(() => {
     axios
-      .get("https://type.fit/api/quotes")
+      .get("https://type.fit/api/quotes/")
       .then((res) => {
         setQuotes(res.data);
       })
@@ -20,9 +22,35 @@ function DataFetching(props) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get("https://api.unsplash.com/collections/1084067/photos", {
+        headers: {
+          Authorization:
+            "Client-ID NrsqWiVvB7s-DqWLn5CCLi9fqY2pR5MaNCN0Ibl35MA",
+        },
+      })
+      .then((res) => {
+        setPics(res.data);
+      })
+      .catch((err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
+  }, []);
+
+  let apiRe = pics.map((pic, index) => {
+    return pic.urls.regular;
+  });
+
+  // console.log(apiRe);
+  // console.log(JSON.stringify(pics[0].urls.regular));
+
+  //--------------------------------------------------------------------
   //Randomize/Shuffle fetched data.
-  function shuffle(mappedQuotesWithIds) {
-    var currentIndex = mappedQuotesWithIds.length,
+  function shuffle(array) {
+    var currentIndex = array.length,
       temporaryValue,
       randomIndex;
 
@@ -33,12 +61,12 @@ function DataFetching(props) {
       currentIndex -= 1;
 
       // And swap it with the current element.
-      temporaryValue = mappedQuotesWithIds[currentIndex];
-      mappedQuotesWithIds[currentIndex] = mappedQuotesWithIds[randomIndex];
-      mappedQuotesWithIds[randomIndex] = temporaryValue;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
     }
 
-    return mappedQuotesWithIds;
+    return array;
   }
   //Add ID's to fetched data.
   const mappedQuotesWithIds = quotes.map((mappedQuote) => {
@@ -48,18 +76,23 @@ function DataFetching(props) {
     return { myId: id, author, text };
   });
 
-  // Use Randomizer
-
+  // Use Randomizer------------------------------------------------------
+  shuffle(apiRe);
   shuffle(mappedQuotesWithIds);
   console.log(mappedQuotesWithIds);
+  console.log(apiRe);
+
+  const filteredPics = apiRe.filter((pic, index) => {
+    return index < 2;
+  });
 
   const filteredQuotes = mappedQuotesWithIds.filter(
     (processedQuotes, index) => {
       return index < 2;
     }
   );
-
-  // console.log(filteredQuotes);
+  console.log(filteredPics);
+  console.log(filteredQuotes);
   //Trigger Quote Animations at certain scroll points
   const scrollerOne = (event) => {
     let scrollEX = Math.round(window.scrollY);
@@ -80,6 +113,7 @@ function DataFetching(props) {
       <SlideIns
         filteredQuotes={filteredQuotes}
         scrollingPoint={scrollingPoint}
+        photos={filteredPics}
       />
     </div>
   );

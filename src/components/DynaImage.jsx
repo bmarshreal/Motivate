@@ -1,7 +1,4 @@
 import React from "react";
-import { Image } from "react-bootstrap";
-import { propTypes } from "react-bootstrap/esm/Image";
-import DataFetching from "./DataFetching";
 
 function DynaImage(props) {
   return (

@@ -1,16 +1,58 @@
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Search } from "react-bootstrap-icons";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Navigate(props) {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle variant="dark" aria-controls="responsive-navbar-nav" />
+        <Link
+          to="/"
+          className="logo"
+          style={{ color: "#FEFE52", fontSize: "2.5rem", margin: "1rem" }}
+          variant="dark"
+        >
+          Motivate!
+        </Link>
+
+        <Navbar.Toggle
+          style={{ backgroundColor: "white" }}
+          aria-controls="responsive-navbar-nav"
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            {/* <Nav.Link
+              style={{
+                margin: "1px",
+                borderRadius: "5px ",
+                backgroundColor: "#FEFDFB",
+                color: "#BBDB49",
+              }}
+              href="#cardsContainer"
+            >
+              Resources
+            </Nav.Link> */}
+            <Nav.Link
+              style={{
+                margin: "1px",
+                borderRadius: "5px ",
+                backgroundColor: "#FEFDFB",
+                color: "#BBDB49",
+              }}
+              href="#slideContainer"
+            >
+              Get Random Quotes!
+            </Nav.Link>
+            {/* <NavDropdown
+              style={{
+                margin: "1px",
+                borderRadius: "5px ",
+                backgroundColor: "#FEFDFB",
+                color: "#BBDB49",
+              }}
+              title="Dropdown"
+              id="collasible-nav-dropdown"
+            >
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -20,13 +62,28 @@ function Navigate(props) {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            <Link to="/about">
+              <Button
+                className="dropdownButton"
+                style={{ color: "#BBDB49", margin: "1px" }}
+                variant="dark"
+              >
+                About
+              </Button>{" "}
+            </Link>
+
+            <Link to="/quotesearch">
+              <Button
+                className="dropdownButton"
+                style={{ color: "#BBDB49", margin: "1px" }}
+                variant="dark"
+              >
+                Search for a Quote... <Search />
+              </Button>{" "}
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -35,21 +92,3 @@ function Navigate(props) {
 }
 
 export default Navigate;
-
-// {
-//   /* <style>
-//         .navbar {
-//             position: relative;
-//             display: -ms-flexbox;
-//             display: flex;
-//             -ms-flex-wrap: wrap;
-//             flex-wrap: wrap;
-//             -ms-flex-align: center;
-//             align-items: center;
-//             -ms-flex-pack: justify;
-//             justify-content: space-between;
-//             padding: .5rem 1rem;
-//             opacity: 0.5;
-//         }
-//     </style> */
-// }

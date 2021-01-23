@@ -1,12 +1,12 @@
 import React from "react";
-import { Image, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import MediaQuery from "react-responsive";
 
 function SlideIns(props) {
   return (
     <div>
       {props.filteredQuotes.map((indexedQuotes, index) => (
-        <ul className="slideContainer" key={indexedQuotes.myId}>
+        <ul id="slideContainer" key={indexedQuotes.myId}>
           {index < 1 ? (
             <Container fluid>
               <li className={props.scrollingPoint ? "leftSlide" : "hidden"}>
@@ -17,7 +17,7 @@ function SlideIns(props) {
                     <Col>
                       <img
                         className="leftSlideImg"
-                        src={props.photos[0].toString()}
+                        src={props.photos[0]}
                         alt="randomPic"
                       ></img>
                     </Col>
@@ -46,7 +46,7 @@ function SlideIns(props) {
                       <Col>
                         <img
                           className="rightSlideImg"
-                          src={props.photos[1].toString()}
+                          src={props.photos[1]}
                           alt="randomPic"
                         ></img>
                       </Col>
@@ -67,7 +67,7 @@ function SlideIns(props) {
                       <Col>
                         <img
                           className="rightSlideImg"
-                          src={props.photos[1].toString()}
+                          src={props.photos[1]}
                           alt="randomPic"
                         ></img>
                       </Col>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import SlideIns from "./SlideIns";
+import QuoteSearch from "./QuoteSearch";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import DynaImage from "./DynaImage";
 
 function DataFetching(props) {
   const [quotes, setQuotes] = useState([]);
@@ -24,7 +24,7 @@ function DataFetching(props) {
 
   useEffect(() => {
     axios
-      .get("https://api.unsplash.com/collections/1084067/photos", {
+      .get("https://api.unsplash.com/collections/1084067/photos?per_page=45", {
         headers: {
           Authorization:
             "Client-ID NrsqWiVvB7s-DqWLn5CCLi9fqY2pR5MaNCN0Ibl35MA",
@@ -45,7 +45,6 @@ function DataFetching(props) {
   });
 
   // console.log(apiRe);
-  // console.log(JSON.stringify(pics[0].urls.regular));
 
   //--------------------------------------------------------------------
   //Randomize/Shuffle fetched data.
@@ -79,8 +78,8 @@ function DataFetching(props) {
   // Use Randomizer------------------------------------------------------
   shuffle(apiRe);
   shuffle(mappedQuotesWithIds);
-  console.log(mappedQuotesWithIds);
-  console.log(apiRe);
+  // console.log(mappedQuotesWithIds);
+  // console.log(apiRe);
 
   const filteredPics = apiRe.filter((pic, index) => {
     return index < 2;
@@ -91,23 +90,24 @@ function DataFetching(props) {
       return index < 2;
     }
   );
-  console.log(filteredPics);
-  console.log(filteredQuotes);
+  // console.log(filteredPics);
+  // console.log(filteredQuotes);
   //Trigger Quote Animations at certain scroll points
   const scrollerOne = (event) => {
     let scrollEX = Math.round(window.scrollY);
-    if (scrollEX > 0 && scrollEX < 150) {
+    if (scrollEX > 2300 && scrollEX < 2450) {
       setScrollingPoint(true);
     }
     if (scrollEX > 200) {
       setScrollingPoint(true);
     }
-    event.preventDefault();
+
     console.log(window.scrollY);
   };
 
   window.addEventListener("scroll", scrollerOne);
 
+  <QuoteSearch mapped={filteredQuotes} />;
   return (
     <div>
       <SlideIns

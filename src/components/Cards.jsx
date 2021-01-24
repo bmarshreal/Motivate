@@ -23,7 +23,7 @@ function Cards(params) {
         <CardDeck>
           <Card>
             <Card.Img
-              style={{ height: "380px" }}
+              style={{ height: "380px", borderRadius: "60%" }}
               variant="top"
               src="https://www.wikihow.com/images/thumb/3/32/Motivate-Yourself-Step-12-Version-5.jpg/aid23823-v4-728px-Motivate-Yourself-Step-12-Version-5.jpg.webp"
             />
@@ -66,7 +66,7 @@ function Cards(params) {
           </Card>
           <Card>
             <Card.Img
-              style={{ height: "380px" }}
+              style={{ height: "380px", borderRadius: "60%" }}
               variant="top"
               src="https://images-na.ssl-images-amazon.com/images/I/51S9Mvr3kFL._SY498_BO1,204,203,200_.jpg"
             />

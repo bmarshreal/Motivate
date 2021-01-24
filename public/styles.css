@@ -36,8 +36,10 @@ html {
   max-width: 100vw;
   width: 100%;
   background-attachment: fixed;
-  background-size: 100vw 60rem;
+  background-size: cover;
   margin-bottom: 4rem;
+  background-position: center;
+  position: relative;
 }
 
 .heroHeader {
@@ -216,8 +218,9 @@ html {
     max-width: 100vw;
     width: auto;
     background-attachment: fixed;
-    background-size: 32rem 100%;
+    background-size: cover;
     margin-bottom: 2rem;
+    background-position: center;
   }
   .heroHeader {
     color: aliceblue;

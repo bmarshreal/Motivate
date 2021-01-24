@@ -26,7 +26,7 @@ function Search(props) {
   //Add ID's to fetched data.
   const mappedQuotesWithIds = quotes.map((mappedQuote) => {
     if (mappedQuote.author === null) {
-      mappedQuote.author = "Uknown Author";
+      mappedQuote.author = "Unknown Author";
     }
     let id = uuidv4();
     const author = mappedQuote.author;

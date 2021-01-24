@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import Navigate from "./Navigate";
-import Footer from "./Footer";
-import { Card } from "react-bootstrap";
+import { Card, Spinner } from "react-bootstrap";
+const QuoteSearchChild = lazy(() => import("./QuoteSearchChild"));
 
 function Search(props) {
   const [quotes, setQuotes] = useState([]);
@@ -67,28 +66,27 @@ function Search(props) {
     );
   });
 
-  // render(paginationBasic);
-
+  const filterCardsLimit = quoteCards.filter((card, index) => {
+    return index < 50;
+  });
   // console.log(searchedQuotes);
   return (
     <div>
-      <div className="heroImage">
-        <Navigate />
-        <h1 className="heroHeader">Search</h1>
-        <input
-          name="author" //name --> author --> state
-          style={{ width: "20rem", borderRadius: "12px" }}
-          type="text"
-          placeholder="Search By Author..."
-          value={searching.author}
-          onChange={searcher}
-        ></input>
-      </div>
-      <div>
-        <ul>
-          {searchedQuotes ? <li className="listSearch">{quoteCards}</li> : null}
-        </ul>
-      </div>
+      <Suspense
+        fallback={
+          <Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+        }
+      >
+        <QuoteSearchChild
+          searching={searching}
+          searcher={searcher}
+          searchedQuotes={searchedQuotes}
+          quoteCards={quoteCards}
+          filterCardsLimit={filterCardsLimit}
+        />
+      </Suspense>
     </div>
   );
 }

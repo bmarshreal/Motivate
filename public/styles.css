@@ -206,13 +206,13 @@ html {
 
   .heroImage {
     background-image: url(https://images.squarespace-cdn.com/content/v1/598d10393e00bedb012df101/1507601916699-VCY10XRI5IOBUKCEBPQD/ke17ZwdGBToddI8pDm48kL0aU6AQOwPnD5bbw5AxIml7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k9kZPbuygN4RSDPe_G5PO_WzeLEitOJDFFu_i-8GIjmhGpbh_WpB9q3hRnhtJGU4w/StockSnap_88IQEON0CF.jpg);
-    min-height: 40rem;
+    min-height: 52rem;
     height: 100%;
     background-repeat: no-repeat;
     max-width: 100vw;
     width: auto;
     background-attachment: fixed;
-    background-size: 30rem 35rem;
+    background-size: 30rem 100%;
     margin-bottom: 2rem;
   }
   .heroHeader {

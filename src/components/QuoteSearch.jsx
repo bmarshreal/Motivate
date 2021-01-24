@@ -67,7 +67,7 @@ function Search(props) {
   });
 
   const filterCardsLimit = quoteCards.filter((card, index) => {
-    return index < 50;
+    return index < 200;
   });
   // console.log(searchedQuotes);
   return (

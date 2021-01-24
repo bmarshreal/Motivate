@@ -8,8 +8,8 @@ function QuoteSearchChild(props) {
         <Navigate />
         <h1 className="heroHeader">Search</h1>
         <input
+          className="searchBar"
           name="author" //name --> author --> state
-          style={{ width: "20rem", borderRadius: "12px" }}
           type="text"
           placeholder="Search By Author..."
           value={props.searching.author}

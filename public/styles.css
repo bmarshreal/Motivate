@@ -184,6 +184,10 @@ html {
   min-width: 300px;
   float: left;
 }
+.searchBar {
+  width: 20rem;
+  border-radius: 12px;
+}
 
 /* .listSearch {
   margin-top: 15rem;
@@ -212,7 +216,7 @@ html {
     max-width: 100vw;
     width: auto;
     background-attachment: fixed;
-    background-size: 30rem 100%;
+    background-size: 32rem 100%;
     margin-bottom: 2rem;
   }
   .heroHeader {
@@ -332,6 +336,13 @@ html {
     float: none;
     max-width: auto;
     min-width: auto;
+  }
+
+  .searchBar {
+    width: 20rem;
+    border-radius: 12px;
+    margin-top: 50%;
+    height: 5rem;
   }
 }
 

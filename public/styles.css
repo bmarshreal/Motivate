@@ -9,7 +9,6 @@ ul {
 body {
   width: 100%;
   height: 100%;
-  background-color: #fdfbf3;
 }
 html {
   position: relative;
@@ -39,7 +38,6 @@ html {
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
-  margin-bottom: 4rem;
   background-position: center;
   position: relative;
 }
@@ -80,7 +78,7 @@ html {
 }
 .about {
   width: 75%;
-  margin: auto;
+  margin: 3rem 3rem 3rem 15%;
   font-size: 2rem;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -97,8 +95,9 @@ html {
 }
 
 .cardsIntro {
-  margin-left: 12%;
-  margin-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-left: 12%;
+  padding-bottom: 2.5rem;
 }
 
 /* ********** ********************************************************/
@@ -106,6 +105,7 @@ html {
   margin-left: 15%;
   width: 70%;
   padding-bottom: 5rem;
+  padding-top: 2.5rem;
 }
 
 .leftSlide {
@@ -265,7 +265,7 @@ html {
     width: auto;
     background-attachment: fixed;
     background-size: cover;
-    margin-bottom: 2rem;
+
     background-position: center;
   }
   .heroHeader {
@@ -297,6 +297,7 @@ html {
   }
 
   .about {
+    margin: 3rem 3rem 3rem 10%;
     width: 80%;
     font-size: 1.1rem;
     padding-bottom: 3rem;
@@ -316,11 +317,13 @@ html {
   height: auto;
 } */
   /* ************************___________________ */
-  #cardsContainer {
-  }
+
   .cardsIntro {
     margin-left: auto;
     margin-bottom: auto;
+    padding-left: 0;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
   }
 
   /* *******************---------------------- */

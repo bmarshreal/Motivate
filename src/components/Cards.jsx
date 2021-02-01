@@ -18,7 +18,7 @@ function Cards(params) {
   window.addEventListener("scroll", scrollerTwo);
 
   return (
-    <div className="cardsIntro">
+    <div className="cardsIntro" style={{ backgroundColor: "#FEFE4C" }}>
       <div className="cardsContainer">
         <CardDeck className="cardDeckContainer">
           <Card>

@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 
 function SlideIns(props) {
   return (
-    <div>
+    <div style={{ backgroundColor: "#fdfbf3" }}>
       {props.filteredQuotes.map((indexedQuotes, index) => (
         <ul id="slideContainer" key={indexedQuotes.myId}>
           {index < 1 ? (

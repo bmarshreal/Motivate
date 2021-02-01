@@ -24,12 +24,15 @@ function DataFetching(props) {
 
   useEffect(() => {
     axios
-      .get("https://api.unsplash.com/collections/1084067/photos?per_page=45", {
-        headers: {
-          Authorization:
-            "Client-ID NrsqWiVvB7s-DqWLn5CCLi9fqY2pR5MaNCN0Ibl35MA",
-        },
-      })
+      .get(
+        "https://api.unsplash.com/collections/1084067/photos?per_page=45&w=414&h=316",
+        {
+          headers: {
+            Authorization:
+              "Client-ID NrsqWiVvB7s-DqWLn5CCLi9fqY2pR5MaNCN0Ibl35MA",
+          },
+        }
+      )
       .then((res) => {
         setPics(res.data);
       })

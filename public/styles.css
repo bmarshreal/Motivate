@@ -9,11 +9,13 @@ ul {
 body {
   width: 100%;
   height: 100%;
+  background-color: #fdfbf3;
 }
 html {
   position: relative;
 }
 .navbar {
+  color: #fefe52;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -55,12 +57,17 @@ html {
   width: auto;
   height: auto;
 }
+.navbar-link {
+  color: #fefe52;
+  font-size: 3rem;
+  margin: 0.5rem;
+}
 .hidden {
   visibility: hidden;
 }
 
 .footer {
-  background-color: black;
+  background-color: #2e380a;
   position: absolute;
   color: white;
   width: 100vw;
@@ -71,14 +78,26 @@ html {
   bottom: 0;
   margin-top: 5rem;
 }
+.about {
+  width: 75%;
+  margin: auto;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
 /* *********************************************************************** */
 #cardsContainer {
   width: 90%;
   margin: auto;
 }
 
+.cardDeckContainer {
+  width: 90%;
+  margin: auto;
+}
+
 .cardsIntro {
-  margin-left: 2rem;
+  margin-left: 12%;
   margin-bottom: 5rem;
 }
 
@@ -86,7 +105,7 @@ html {
 #slideContainer {
   margin-left: 15%;
   width: 70%;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
 }
 
 .leftSlide {
@@ -102,7 +121,7 @@ html {
   max-width: 100%;
   width: auto;
   display: block;
-  margin: auto;
+  padding-top: 1rem;
 }
 .leftSlideImg {
   width: 100%;
@@ -121,7 +140,7 @@ html {
   min-width: 100%;
   font-size: x-large;
   font-weight: 600;
-  background-color: black;
+  background-color: #2e380a;
   color: white;
   border-radius: 10px;
 }
@@ -131,6 +150,7 @@ html {
   animation: slideInRight;
   animation-duration: 3s;
   margin-top: auto;
+  margin-bottom: 5rem;
 }
 
 .rightSlideText {
@@ -138,7 +158,7 @@ html {
   float: right;
   min-width: 100%;
   display: block;
-  margin: auto;
+  padding-top: 1rem;
 }
 .rightSlideImg {
   width: 100%;
@@ -157,7 +177,7 @@ html {
   min-width: 100%;
   font-size: x-large;
   font-weight: 600;
-  background-color: black;
+  background-color: #2e380a;
   color: white;
   border-radius: 10px;
 }
@@ -209,11 +229,37 @@ html {
   * {
     text-align: center;
   }
+  .navbar {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: auto;
+    opacity: 1;
+    font-weight: 700;
+    background-color: #fefe52;
+  }
+  .navbar-link {
+    color: #2b3409;
+    font-size: 1.3rem;
+    margin: 0.5rem;
+  }
+  /* .navbar-link {
+  color: #fefe52;
+  font-size: 3rem;
+  margin: 0.5rem;
+} */
 
   .heroImage {
-    background-image: url(https://images.squarespace-cdn.com/content/v1/598d10393e00bedb012df101/1507601916699-VCY10XRI5IOBUKCEBPQD/ke17ZwdGBToddI8pDm48kL0aU6AQOwPnD5bbw5AxIml7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k9kZPbuygN4RSDPe_G5PO_WzeLEitOJDFFu_i-8GIjmhGpbh_WpB9q3hRnhtJGU4w/StockSnap_88IQEON0CF.jpg);
-    min-height: 52rem;
-    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(https://images.squarespace-cdn.com/content/v1/598d10393e00bedb012df101/1507601916699-VCY10XRI5IOBUKCEBPQD/ke17ZwdGBToddI8pDm48kL0aU6AQOwPnD5bbw5AxIml7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k9kZPbuygN4RSDPe_G5PO_WzeLEitOJDFFu_i-8GIjmhGpbh_WpB9q3hRnhtJGU4w/StockSnap_88IQEON0CF.jpg);
+    /* min-height: 44rem; */
+    height: 38rem;
     background-repeat: no-repeat;
     max-width: 100vw;
     width: auto;
@@ -223,15 +269,52 @@ html {
     background-position: center;
   }
   .heroHeader {
-    color: aliceblue;
-    margin-top: 5rem;
+    color: #fdfbf3;
+    margin: 5rem;
+    padding-bottom: 2px;
     height: auto;
     width: auto;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 75%;
+    background-color: transparent;
+    opacity: 100%;
+    border: solid #fcd033 5px;
+    border-radius: 12px;
   }
+  .footer {
+    background-color: #2e380a;
+    position: absolute;
+    color: white;
+    width: 100vw;
+    opacity: 60%;
+    height: 3rem;
+    font-weight: 600;
+    padding-top: 10px;
+    bottom: 0;
+    margin-top: 5rem;
+  }
+
+  .about {
+    width: 80%;
+    font-size: 1.1rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+  }
+  /* .heroHeader {
+  color: aliceblue;
+  margin-top: 13.5rem;
+  font-size: 4.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  opacity: 60%;
+  color: white;
+  max-width: 38%;
+  width: auto;
+  height: auto;
+} */
   /* ************************___________________ */
   #cardsContainer {
   }
@@ -245,7 +328,7 @@ html {
     margin-top: 2rem;
     margin-left: -2%;
     width: 100%;
-    padding-bottom: 8rem;
+    padding-bottom: 1rem;
   }
   .leftSlide {
     margin: auto;
@@ -262,8 +345,8 @@ html {
     margin: auto;
   }
   .leftSlideImg {
-    height: 100%;
-    width: 100%;
+    height: 316px;
+    width: 26rem;
     float: none;
     border-radius: 10px 10px 0 0px;
     margin: auto;
@@ -277,7 +360,7 @@ html {
     min-width: 100%;
     font-size: x-large;
     font-weight: 600;
-    background-color: black;
+    background-color: #2e380a;
     color: white;
     border-radius: 0 0 10px 10px;
   }
@@ -285,6 +368,7 @@ html {
   .rightSlide {
     margin: auto;
     margin-top: auto;
+    margin-bottom: 5rem;
     animation: slideInRight;
     animation-duration: 3s;
   }
@@ -297,8 +381,8 @@ html {
     margin: auto;
   }
   .rightSlideImg {
-    height: 100%;
-    width: 100%;
+    height: 316px;
+    width: 26rem;
     float: none;
     border-radius: 10px 10px 0 0px;
     margin: auto;
@@ -312,7 +396,7 @@ html {
     min-width: 100%;
     font-size: x-large;
     font-weight: 600;
-    background-color: black;
+    background-color: #2e380a;
     color: white;
     border-radius: 0 0 10px 10px;
   }
@@ -326,7 +410,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
-    padding-bottom: 5rem;
+    padding-bottom: auto;
   }
   .listCard {
     height: auto;
@@ -344,8 +428,8 @@ html {
   .searchBar {
     width: 20rem;
     border-radius: 12px;
-    margin-top: 50%;
-    height: 5rem;
+    margin-top: 25%;
+    height: 2.5rem;
   }
 }
 

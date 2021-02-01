@@ -20,7 +20,7 @@ function Cards(params) {
   return (
     <div className="cardsIntro">
       <div className="cardsContainer">
-        <CardDeck>
+        <CardDeck className="cardDeckContainer">
           <Card>
             <Card.Img
               style={{ height: "380px", borderRadius: "60%" }}
@@ -34,11 +34,11 @@ function Cards(params) {
                 finish!
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
-                style={{ fontWeight: 600 }}
+                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
                 href="https://www.wikihow.com/Motivate-Yourself"
-                variant="warning"
+                // variant="warning"
               >
                 Check it Out!
               </Button>{" "}
@@ -54,11 +54,11 @@ function Cards(params) {
               <Card.Title>A Blog for Inspiration and Strategy</Card.Title>
               <Card.Text>An Inspiring Blog I Personally Recommend</Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
                 href="https://www.marcandangel.com/"
-                style={{ fontWeight: 600 }}
-                variant="warning"
+                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
+                // variant="warning"
               >
                 Check it Out!
               </Button>{" "}
@@ -76,11 +76,11 @@ function Cards(params) {
                 A Quick Amazon Search for Books on Self Motivation!
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
-                style={{ fontWeight: 600 }}
+                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
                 href="https://www.amazon.com/Year-Positive-Thinking-Inspiration-Courage/dp/1641522410/ref=sr_1_1_sspa?crid=A859A4A7FU0W&dchild=1&keywords=self+motivation+books&qid=1610990364&sprefix=self+motiv%2Caps%2C201&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFSTDZIR0I3N0ZETlkmZW5jcnlwdGVkSWQ9QTA3ODgzMDRBRlpEU0lYWlM1QUEmZW5jcnlwdGVkQWRJZD1BMDUxMjE5NzJDRDFWVEc1UzVQTlMmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
-                variant="warning"
+                // variant="warning"
               >
                 Check it Out!
               </Button>{" "}

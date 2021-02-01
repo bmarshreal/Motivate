@@ -10,15 +10,7 @@ function About(props) {
         <h1 className="heroHeader">About</h1>
       </div>
 
-      <p
-        style={{
-          width: "75%",
-          margin: "auto",
-          fontSize: "2rem",
-          paddingBottom: "3rem",
-          marginBottom: "3rem",
-        }}
-      >
+      <p className="about">
         It’s amazing how an uplifting quote or inspirational story can
         completely change your day, and sometimes your life. One quote that
         touches your heart or reminds you of your dreams can inspire steps that

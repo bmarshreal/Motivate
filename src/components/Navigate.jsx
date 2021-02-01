@@ -6,17 +6,12 @@ function Navigate(props) {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
-        <Link
-          to="/"
-          className="logo"
-          style={{ color: "#FEFE52", fontSize: "2.5rem", margin: "1rem" }}
-          variant="dark"
-        >
+        <Link to="/" className="navbar-link" variant="dark">
           Motivate!
         </Link>
 
         <Navbar.Toggle
-          style={{ backgroundColor: "white" }}
+          style={{ backgroundColor: "#fdfbf3" }}
           aria-controls="responsive-navbar-nav"
         />
         <Navbar.Collapse id="responsive-navbar-nav">

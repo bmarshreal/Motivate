@@ -16,17 +16,6 @@ function Navigate(props) {
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Nav.Link
-              style={{
-                margin: "1px",
-                borderRadius: "5px ",
-                backgroundColor: "#FEFDFB",
-                color: "#BBDB49",
-              }}
-              href="#cardsContainer"
-            >
-              Resources
-            </Nav.Link> */}
             <Nav.Link
               style={{
                 margin: "1px",
@@ -63,7 +52,11 @@ function Navigate(props) {
             <Link to="/about">
               <Button
                 className="dropdownButton"
-                style={{ color: "#BBDB49", margin: "1px" }}
+                style={{
+                  color: "#BBDB49",
+                  margin: "1px",
+                  backgroundColor: "#2e380a",
+                }}
                 variant="dark"
               >
                 About
@@ -73,7 +66,11 @@ function Navigate(props) {
             <Link to="/quotesearch">
               <Button
                 className="dropdownButton"
-                style={{ color: "#BBDB49", margin: "1px" }}
+                style={{
+                  color: "#BBDB49",
+                  margin: "1px",
+                  backgroundColor: "#2e380a",
+                }}
                 variant="dark"
               >
                 Search for a Quote... <Search />

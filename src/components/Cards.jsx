@@ -18,7 +18,7 @@ function Cards(params) {
   window.addEventListener("scroll", scrollerTwo);
 
   return (
-    <div className="cardsIntro" style={{ backgroundColor: "#FEFE4C" }}>
+    <div className="cardsIntro" style={{ backgroundColor: "#FEFE52" }}>
       <div className="cardsContainer">
         <CardDeck className="cardDeckContainer">
           <Card>
@@ -30,19 +30,20 @@ function Cards(params) {
             <Card.Body>
               <Card.Title>Motivation Wiki</Card.Title>
               <Card.Text>
-                Here is a simple wiki about motivating one's self from start to
-                finish!
+                Here is a simple wiki about motivating one's self.
               </Card.Text>
-            </Card.Body>
-            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
-                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
+                style={{
+                  fontWeight: 600,
+                  backgroundColor: "#BBDB49",
+                  border: "none",
+                }}
                 href="https://www.wikihow.com/Motivate-Yourself"
                 // variant="warning"
               >
                 Check it Out!
-              </Button>{" "}
-            </Card.Footer>
+              </Button>
+            </Card.Body>
           </Card>
           <Card>
             <Card.Img
@@ -53,16 +54,18 @@ function Cards(params) {
             <Card.Body>
               <Card.Title>A Blog for Inspiration and Strategy</Card.Title>
               <Card.Text>An Inspiring Blog I Personally Recommend</Card.Text>
-            </Card.Body>
-            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
                 href="https://www.marcandangel.com/"
-                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
+                style={{
+                  fontWeight: 600,
+                  backgroundColor: "#BBDB49",
+                  border: "none",
+                }}
                 // variant="warning"
               >
                 Check it Out!
-              </Button>{" "}
-            </Card.Footer>
+              </Button>
+            </Card.Body>
           </Card>
           <Card>
             <Card.Img
@@ -75,16 +78,18 @@ function Cards(params) {
               <Card.Text>
                 A Quick Amazon Search for Books on Self Motivation!
               </Card.Text>
-            </Card.Body>
-            <Card.Footer style={{ backgroundColor: "white" }}>
               <Button
-                style={{ fontWeight: 600, backgroundColor: "#FCD033" }}
+                style={{
+                  fontWeight: 600,
+                  backgroundColor: "#BBDB49",
+                  border: "none",
+                }}
                 href="https://www.amazon.com/Year-Positive-Thinking-Inspiration-Courage/dp/1641522410/ref=sr_1_1_sspa?crid=A859A4A7FU0W&dchild=1&keywords=self+motivation+books&qid=1610990364&sprefix=self+motiv%2Caps%2C201&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFSTDZIR0I3N0ZETlkmZW5jcnlwdGVkSWQ9QTA3ODgzMDRBRlpEU0lYWlM1QUEmZW5jcnlwdGVkQWRJZD1BMDUxMjE5NzJDRDFWVEc1UzVQTlMmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
                 // variant="warning"
               >
                 Check it Out!
-              </Button>{" "}
-            </Card.Footer>
+              </Button>
+            </Card.Body>
           </Card>
         </CardDeck>
       </div>

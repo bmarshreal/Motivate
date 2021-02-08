@@ -1,6 +1,7 @@
 import React from "react";
 import Navigate from "./Navigate";
 import Footer from "./Footer";
+import Floater from "./Floater";
 
 function About(props) {
   return (
@@ -9,7 +10,7 @@ function About(props) {
         <Navigate />
         <h1 className="heroHeader">About</h1>
       </div>
-
+      <Floater />
       <p className="about">
         It’s amazing how an uplifting quote or inspirational story can
         completely change your day, and sometimes your life. One quote that

@@ -19,7 +19,14 @@ function QuoteSearchChild(props) {
       <div>
         {" "}
         {props.searching.author ? null : (
-          <h3 style={{ position: "static", topMargin: "10rem", float: "none" }}>
+          <h3
+            style={{
+              position: "static",
+              topMargin: "10rem",
+              float: "none",
+              paddingTop: "2rem",
+            }}
+          >
             Search for More Quotes...{" "}
           </h3>
         )}

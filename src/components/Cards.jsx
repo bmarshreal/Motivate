@@ -1,29 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Card, CardDeck } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Cards(params) {
-  const [scrollingPointTwo, setScrollingPointTwo] = useState(false);
-
-  const scrollerTwo = (event) => {
-    let scrollEX = Math.round(window.scrollY);
-    if (scrollEX > 200) {
-      setScrollingPointTwo(true);
-    }
-
-    console.log(window.scrollY);
-    console.log(scrollingPointTwo);
-  };
-
-  window.addEventListener("scroll", scrollerTwo);
-
   return (
-    <div className="cardsIntro" style={{ backgroundColor: "#FEFE52" }}>
+    <div className="cardsIntro" style={{ backgroundColor: "#FEFBF7" }}>
       <div className="cardsContainer">
         <CardDeck className="cardDeckContainer">
           <Card>
             <Card.Img
-              style={{ height: "380px", borderRadius: "60%" }}
+              className="card-img"
               variant="top"
               src="https://www.wikihow.com/images/thumb/3/32/Motivate-Yourself-Step-12-Version-5.jpg/aid23823-v4-728px-Motivate-Yourself-Step-12-Version-5.jpg.webp"
             />
@@ -35,8 +21,9 @@ function Cards(params) {
               <Button
                 style={{
                   fontWeight: 600,
-                  backgroundColor: "#BBDB49",
+                  backgroundColor: "#E7F24A",
                   border: "none",
+                  color: "#36390A",
                 }}
                 href="https://www.wikihow.com/Motivate-Yourself"
                 // variant="warning"
@@ -47,9 +34,9 @@ function Cards(params) {
           </Card>
           <Card>
             <Card.Img
-              style={{ height: "380px" }}
+              className="card-img"
               variant="top"
-              src="https://addicted2success.com/wp-content/uploads/2020/12/5-Powerful-Reasons-Why-You-Should-Write-Down-Your-Goals-400x240.png"
+              src="https://media.istockphoto.com/photos/bloggingblog-concepts-ideas-with-worktable-picture-id922745190?k=6&m=922745190&s=612x612&w=0&h=qBmau_GKQZasMW14NJBp3u2vU-f5YFCcN1N71Exa8iE="
             />
             <Card.Body>
               <Card.Title>A Blog for Inspiration and Strategy</Card.Title>
@@ -58,8 +45,9 @@ function Cards(params) {
                 href="https://www.marcandangel.com/"
                 style={{
                   fontWeight: 600,
-                  backgroundColor: "#BBDB49",
+                  backgroundColor: "#E7F24A",
                   border: "none",
+                  color: "#36390A",
                 }}
                 // variant="warning"
               >
@@ -69,7 +57,7 @@ function Cards(params) {
           </Card>
           <Card>
             <Card.Img
-              style={{ height: "380px", borderRadius: "60%" }}
+              className="card-img"
               variant="top"
               src="https://images-na.ssl-images-amazon.com/images/I/51S9Mvr3kFL._SY498_BO1,204,203,200_.jpg"
             />
@@ -81,8 +69,9 @@ function Cards(params) {
               <Button
                 style={{
                   fontWeight: 600,
-                  backgroundColor: "#BBDB49",
+                  backgroundColor: "#E7F24A",
                   border: "none",
+                  color: "#36390A",
                 }}
                 href="https://www.amazon.com/Year-Positive-Thinking-Inspiration-Courage/dp/1641522410/ref=sr_1_1_sspa?crid=A859A4A7FU0W&dchild=1&keywords=self+motivation+books&qid=1610990364&sprefix=self+motiv%2Caps%2C201&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFSTDZIR0I3N0ZETlkmZW5jcnlwdGVkSWQ9QTA3ODgzMDRBRlpEU0lYWlM1QUEmZW5jcnlwdGVkQWRJZD1BMDUxMjE5NzJDRDFWVEc1UzVQTlMmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
                 // variant="warning"

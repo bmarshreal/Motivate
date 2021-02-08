@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useState, useEffect } from "react";
 import axios from "axios";
+import Floater from "./Floater";
 import { v4 as uuidv4 } from "uuid";
 import { Card, Spinner } from "react-bootstrap";
 const QuoteSearchChild = lazy(() => import("./QuoteSearchChild"));
@@ -67,7 +68,7 @@ function Search(props) {
   });
 
   const filterCardsLimit = quoteCards.filter((card, index) => {
-    return index < 200;
+    return index < 125;
   });
   // console.log(searchedQuotes);
   return (
@@ -79,6 +80,7 @@ function Search(props) {
           </Spinner>
         }
       >
+        <Floater />
         <QuoteSearchChild
           searching={searching}
           searcher={searcher}

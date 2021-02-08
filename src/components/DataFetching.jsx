@@ -20,6 +20,9 @@ function DataFetching(props) {
           console.log(err);
         }
       });
+    return () => {
+      console.log("Quotes Mounted");
+    };
   }, []);
 
   useEffect(() => {
@@ -41,6 +44,9 @@ function DataFetching(props) {
           console.log(err);
         }
       });
+    return () => {
+      console.log("Pictures Mounted");
+    };
   }, []);
 
   let apiRe = pics.map((pic, index) => {
@@ -105,7 +111,7 @@ function DataFetching(props) {
       setScrollingPoint(true);
     }
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   };
 
   window.addEventListener("scroll", scrollerOne);

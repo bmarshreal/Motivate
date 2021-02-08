@@ -1,17 +1,34 @@
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
+import MediaQuery from "react-responsive";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Navigate(props) {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" variant="dark">
         <Link to="/" className="navbar-link" variant="dark">
           Motivate!
+          <MediaQuery query="(max-device-width: 500px)">
+            <p
+              style={{
+                fontFamily: "sans-serif",
+                fontSize: "1rem",
+                position: "absolute",
+                left: "5rem",
+                color: "#FCB220",
+              }}
+            >
+              Inspirational Quotes
+            </p>
+          </MediaQuery>
         </Link>
 
         <Navbar.Toggle
-          style={{ backgroundColor: "#fdfbf3" }}
+          style={{
+            borderColor: "#FCB220",
+          }}
+          variant="dark"
           aria-controls="responsive-navbar-nav"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -20,8 +37,8 @@ function Navigate(props) {
               style={{
                 margin: "1px",
                 borderRadius: "5px ",
-                backgroundColor: "#FEFDFB",
-                color: "#BBDB49",
+                backgroundColor: "#E7F24A",
+                color: "#392F0A",
               }}
               href="#slideContainer"
             >
@@ -31,7 +48,7 @@ function Navigate(props) {
               style={{
                 margin: "1px",
                 borderRadius: "5px ",
-                backgroundColor: "#FEFDFB",
+                backgroundColor: "#F8EFD8",
                 color: "#BBDB49",
               }}
               title="Dropdown"
@@ -50,29 +67,11 @@ function Navigate(props) {
           </Nav>
           <Nav>
             <Link to="/about">
-              <Button
-                className="dropdownButton"
-                style={{
-                  color: "#BBDB49",
-                  margin: "1px",
-                  backgroundColor: "#2e380a",
-                }}
-                variant="dark"
-              >
-                About
-              </Button>{" "}
+              <Button variant="dark">About</Button>{" "}
             </Link>
 
             <Link to="/quotesearch">
-              <Button
-                className="dropdownButton"
-                style={{
-                  color: "#BBDB49",
-                  margin: "1px",
-                  backgroundColor: "#2e380a",
-                }}
-                variant="dark"
-              >
+              <Button variant="dark">
                 Search for a Quote... <Search />
               </Button>{" "}
             </Link>

@@ -86,7 +86,6 @@ html {
 
 .navbarButton {
   color: #2f3509;
-
   background-color: #fcb220;
   font-weight: 800;
   border: none;
@@ -95,7 +94,9 @@ html {
   background-color: #362d0d;
   margin: auto;
   font-weight: 700;
-  width: 100%;
+  width: 10rem;
+  right: 10%;
+  position: relative;
 }
 .hidden {
   visibility: hidden;
@@ -337,6 +338,8 @@ html {
     margin: auto;
     font-weight: 700;
     width: 100%;
+    right: 0;
+    position: auto;
   }
 
   .navbar-link {

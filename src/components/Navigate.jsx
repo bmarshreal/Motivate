@@ -66,13 +66,13 @@ function Navigate(props) {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <Link to="/about">
+            <Link style={{ margin: "1%" }} to="/about">
               <Button variant="dark">About</Button>{" "}
             </Link>
 
-            <Link to="/quotesearch">
+            <Link style={{ margin: "1%" }} to="/quotesearch">
               <Button variant="dark">
-                Search for a Quote... <Search />
+                Search... <Search />
               </Button>{" "}
             </Link>
           </Nav>

@@ -5,6 +5,7 @@ import Navigate from "./Navigate";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Footer";
 import Floater from "./Floater";
+import SlideIns from "./SlideIns";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Home(props) {
@@ -23,6 +24,7 @@ function Home(props) {
         <div className="slideInSection">
           <DataFetching />
         </div>
+
         <Footer />
       </div>
     </div>

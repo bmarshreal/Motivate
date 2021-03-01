@@ -11,7 +11,7 @@ function DataFetching(props) {
 
   useEffect(() => {
     axios
-      .get("https://type.fit/api/quotes/")
+      .get("https://motivatebkb.herokuapp.com/ ")
       .then((res) => {
         setQuotes(res.data);
       })
@@ -54,6 +54,7 @@ function DataFetching(props) {
   });
 
   // console.log(apiRe);
+  console.log(quotes);
 
   //--------------------------------------------------------------------
   //Randomize/Shuffle fetched data.
@@ -79,8 +80,8 @@ function DataFetching(props) {
   //Add ID's to fetched data.
   const mappedQuotesWithIds = quotes.map((mappedQuote) => {
     let id = uuidv4();
-    const author = mappedQuote.author;
-    const text = mappedQuote.text;
+    const author = mappedQuote.a;
+    const text = mappedQuote.q;
     return { myId: id, author, text };
   });
 

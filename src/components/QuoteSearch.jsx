@@ -13,7 +13,7 @@ function Search(props) {
   });
   useEffect(() => {
     axios
-      .get("https://type.fit/api/quotes/")
+      .get("https://motivatebkb.herokuapp.com/ ")
       .then((res) => {
         setQuotes(res.data);
       })
@@ -30,8 +30,8 @@ function Search(props) {
       mappedQuote.author = "Unknown Author";
     }
     let id = uuidv4();
-    const author = mappedQuote.author;
-    const text = mappedQuote.text;
+    const author = mappedQuote.a;
+    const text = mappedQuote.q;
     return { myId: id, author, text };
   });
 
